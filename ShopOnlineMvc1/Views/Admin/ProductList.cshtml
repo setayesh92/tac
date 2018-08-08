@@ -1,0 +1,86 @@
+﻿@model IEnumerable<ModelShopOnline.Model.Product>
+
+@{
+    ViewBag.Title = "لیست محصولات";
+}
+
+<h2>لیست محصولات</h2>
+
+
+<table class="table table-bordered table-hover table-striped " >
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.NameBoard)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Category.Name)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.FirstPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reduction)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastPrice)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TimeGaranty)
+            </th>
+         
+            <th>ابزار </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>
+                    @x.Id
+                </td>
+                <td>
+                    @x.NameBoard
+                </td>
+                @*<td>
+                    @x.Category.Name
+                </td>*@
+                <td>
+                    @x.FirstPrice
+                </td>
+                <td>
+                    @x.Reduction 
+                </td>
+                <td>
+                    @x.LastPrice
+                </td>
+
+                <td>
+                    @x.Number
+                </td>
+                <td>
+                    @x.TimeGaranty
+                </td>
+                
+                <td>
+                 <a href="@Url.Action("Edit","Admin",new {id = x.Id })" class="btn btn-primary btn-xs">
+                     <span class="glyphicon glyphicon-edit" ></span>
+                         </a>
+                    <a href="@Url.Action("Delete","Admin",new { id = x.Id})"
+                      class="btn btn-danger btn-xs " >
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </a>
+
+               </td>
+            </tr>
+        }
+    </tbody>
+</table>

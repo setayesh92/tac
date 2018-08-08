@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopOnlineMvc1", "ShopOnlineMvc1\ShopOnlineMvc1.csproj", "{55BB0154-54A4-4A64-8C7A-0F2880FEB623}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelShopOnline1", "ModelShopOnline1\ModelShopOnline1.csproj", "{5E2BA2F5-91BC-47EF-94D4-E47D23FA2C6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{55BB0154-54A4-4A64-8C7A-0F2880FEB623}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55BB0154-54A4-4A64-8C7A-0F2880FEB623}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55BB0154-54A4-4A64-8C7A-0F2880FEB623}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E2BA2F5-91BC-47EF-94D4-E47D23FA2C6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E2BA2F5-91BC-47EF-94D4-E47D23FA2C6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E2BA2F5-91BC-47EF-94D4-E47D23FA2C6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E2BA2F5-91BC-47EF-94D4-E47D23FA2C6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

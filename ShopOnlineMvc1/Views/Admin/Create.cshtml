@@ -1,0 +1,104 @@
+﻿@model ModelShopOnline.Model.DetailProductPainting
+
+
+@{
+    ViewBag.Title = "مشخصات محصول";
+}
+
+<h2 style="direction:rtl;font-weight:bold;" > @ViewBag.Title </h2>
+
+@using (Html.BeginForm("Create", "Admin", FormMethod.Post,
+                new { @class = "form-horizental", direction = "rtl", enctype = "multipart/form-data" }))
+{          @Html.ValidationSummary(true,null,new { @class="text-danger"})
+    <div class="form-group">
+        @Html.LabelFor(x => x.CategoryId, new { @class = "control-label col-sm-2", style = "font-size:18px" })
+        <div class="col-sm-10">
+            @Html.DropDownListFor(x => x.CategoryId,null,new { @class = "form-control", placeholder = "انتخاب کنید" })
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.NameBoard, new { @class = "control-label col-sm-2",style="font-size:18px" })
+        <div class="col-sm-10">
+            @Html.TextBoxFor(x => x.NameBoard, new { @class = "form-control", placeholder = "نام محصول" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.NameArtist, new { @class = "control-label col-sm-2", style = "font-size:18px" })
+        <div class="col-sm-10">
+            @Html.TextBoxFor(x => x.NameArtist, new { @class = "form-control", placeholder = "نام هنرمند" })
+        </div>
+    </div><div class="form-group">
+    @Html.LabelFor(x => x.SizeBoard, new { @class = "control-label col-sm-2", style = "font-size:18px" })
+    <div class="col-sm-10">
+        @Html.TextBoxFor(x => x.SizeBoard, new { @class = "form-control", placeholder = "سایز تابلو" })
+    </div>
+</div><div class="form-group">
+    @Html.LabelFor(x => x.Technique, new { @class = "control-label col-sm-2", style = "font-size:18px" })
+    <div class="col-sm-10">
+        @Html.TextBoxFor(x => x.Technique, new { @class = "form-control", placeholder = "نام تکنیک" })
+    </div>
+</div>
+            <div class="form-group">
+                @Html.LabelFor(x=>x.FirstPrice,new { @class = "control-label col-sm-2", style = "font-size:18px" })
+                <div class="col-sm-10">
+                    @Html.TextBoxFor(x=>x.FirstPrice, new{ @class = "form-control",placeholder="قیمت اولیه" ,type="number"} )
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(x=>x.Reduction,  new { @class = "control-label col-sm-2", style = "font-size:18px" })
+                <div class="col-sm-10">
+                    @Html.TextBoxFor(x=>x.Reduction, new { @class = "form-control",placeholder="تخفیف",type = "number" } )
+                   
+                </div>
+            </div>
+              <div class="form-group">
+                @Html.LabelFor(x=>x.LastPrice, new { @class = "control-label col-sm-2", style = "font-size:18px" })
+                <div class="col-sm-10">
+                    @Html.TextBoxFor(x=>x.LastPrice,new { @class = "form-control", placeholder = "قیمت نهایی", type = "number" } )
+                   
+                </div>
+            </div>
+
+               <div class="form-group">
+                @Html.LabelFor(x=>x.Number,  new { @class = "control-label col-sm-2", style = "font-size:18px" })
+                <div class="col-sm-10">
+                    @Html.TextBoxFor(x => x.Number, new { @class = "form-control", placeholder="تعداد",type="number" } )
+                      </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(x=>x.TimeGaranty,new { @class = "control-label col-sm-2", style = "font-size:18px" })
+                <div class="col-sm-10">
+                    @Html.TextBoxFor(x=>x.TimeGaranty,  new { @class = "form-control", placeholder = "مدت ضمانت", type = "number" })
+                    @*@Html.ValidationMessageFor(x=>x.TimeGaranty, "", new { @class = "text-danger" })*@
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.Label("UrlImage1","تصویرمحصول",new { @class = "control-label col-sm-2", style = "font-size:18px" })
+                <div class="col-sm-10">
+                    @Html.TextBox("UrlImage1",null,new { @class = "form-control",type ="file" }  )
+                  @Html.ValidationMessage("UrlImage1",new {@class="text-danger" })
+                </div>
+            </div>
+                  
+                  <div class="form-group">
+            <button class="btn btn-success col-sm-push-8" type="submit">ذخیره</button>
+        </div>
+}
+
+    <link href="~/Content/bootstrap-rtl.css" rel="stylesheet" />
+
+        <link href="~/Content/bootstrap-theme-rtl.css" rel="stylesheet" />
+          <link href="~/Content/Site.css" rel="stylesheet" />
+@*<div>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+        @Html.ActionLink("Back to List", "Index")
+    </div>*@
+
+@*@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}*@
